@@ -1,0 +1,44 @@
+name: Security Scan
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 12 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  secret-scan-boundary:
+    name: Secret scan boundary check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for obvious committed secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RInE '(AWS_SECRET_ACCESS_KEY|PRIVATE KEY|GITHUB_TOKEN=|api[_-]?key=|password=)' . \
+            --exclude-dir=.git \
+            --exclude=security-scan.yml; then
+            echo 'Potential secret-like material found. Review required.'
+            exit 1
+          fi
+          echo 'No obvious secret-like material detected by lightweight repository check.'
+
+  dependency-review-placeholder:
+    name: Dependency review placeholder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Dependency boundary note
+        run: |
+          echo 'Add language-specific dependency scanning when package manifests are introduced.'
