@@ -1,0 +1,15 @@
+# Repository ownership
+# Adjust owners as teams/users are added to the organization.
+
+* @S3curethecloud
+
+# Governance and security-sensitive paths
+/.github/ @S3curethecloud
+/SECURITY.md @S3curethecloud
+/CODEOWNERS @S3curethecloud
+/docs/control-boundaries.md @S3curethecloud
+/docs/evidence-model.md @S3curethecloud
+/labs/security/ @S3curethecloud
+/labs/compliance/ @S3curethecloud
+/accelerators/ @S3curethecloud
+/scripts/ @S3curethecloud
