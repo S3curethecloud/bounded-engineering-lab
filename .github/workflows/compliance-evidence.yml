@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate local evidence summary
-        run: ./scripts/generate-evidence.sh
+        run: bash ./scripts/generate-evidence.sh
 
       - name: Upload evidence artifact
         uses: actions/upload-artifact@v4
