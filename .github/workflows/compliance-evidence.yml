@@ -1,0 +1,26 @@
+name: Compliance Evidence
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-summary:
+    name: Generate evidence summary
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate local evidence summary
+        run: ./scripts/generate-evidence.sh
+
+      - name: Upload evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bounded-engineering-evidence
+          path: evidence-output/
+          if-no-files-found: error
