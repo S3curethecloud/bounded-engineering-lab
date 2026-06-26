@@ -56,21 +56,23 @@ Run:
 bash ./scripts/validate-lab.sh
 bash ./scripts/check-boundaries.sh
 bash ./scripts/generate-evidence.sh
-Security Boundaries
+```
+
+## Security Boundaries
 
 AI output is advisory only. Human review is required before merge, release, deployment, or compliance assertion.
 
-Compliance Mapping
+## Compliance Mapping
 
 This lab may support evidence for:
 
-Change review
-Secure SDLC review
-AI governance boundary review
-Pull request traceability
+- Change review
+- Secure SDLC review
+- AI governance boundary review
+- Pull request traceability
 
 It does not prove compliance certification or production operating effectiveness.
 
-Reuse Model
+## Reuse Model
 
 If validated, this lab can become a reusable accelerator for bounded AI-assisted pull request review workflows.
