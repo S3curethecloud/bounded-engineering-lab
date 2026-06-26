@@ -9,10 +9,21 @@ if [[ ! -d "labs/ai-workflows" ]]; then
 fi
 
 while IFS= read -r file; do
-  if grep -RInE '\b(auto-approve|autonomous approval|auto-merge|autonomous merge|auto-deploy|autonomous deployment|certifies compliance|proves compliance|production-authoritative)\b' "$file"; then
+  while IFS= read -r match; do
+    line_number="${match%%:*}"
+    line_text="${match#*:}"
+
+    # Safe bounded/negative statements should not fail the check.
+    if echo "$line_text" | grep -Eiq '^\s*(-\s*)?(no|not|must not|does not|do not|without|advisory only|non-authoritative)'; then
+      continue
+    fi
+
+    echo "${file}:${line_number}:${line_text}"
     echo "Potential AI authority boundary violation detected in: $file"
     status=1
-  fi
+  done < <(
+    grep -nEi '\b(auto-approve|autonomous approval|auto-merge|autonomous merge|auto-deploy|autonomous deployment|certifies compliance|proves compliance|production-authoritative)\b' "$file" || true
+  )
 done < <(find labs/ai-workflows -type f -name "*.md" | sort)
 
 if [[ "$status" -ne 0 ]]; then
