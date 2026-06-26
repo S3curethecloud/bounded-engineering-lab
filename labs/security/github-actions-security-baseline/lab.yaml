@@ -1,0 +1,13 @@
+id: github-actions-security-baseline
+name: GitHub Actions Security Baseline
+category: security
+status: draft
+owner: SecureTheCloud
+validation:
+  - structure
+  - boundary
+  - evidence
+evidence:
+  - labs/security/github-actions-security-baseline/evidence/sample-evidence-summary.md
+accelerator_path: accelerators/github-actions/security-baseline/
+authority_boundary: non-production, human-reviewed, advisory baseline

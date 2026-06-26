@@ -1,0 +1,15 @@
+id: bounded-ai-pr-reviewer
+name: Bounded AI PR Reviewer
+category: ai-workflow
+status: draft
+owner: SecureTheCloud
+validation:
+  - structure
+  - boundary
+  - markdown-fence
+  - ai-boundary
+  - registry
+evidence:
+  - labs/ai-workflows/bounded-ai-pr-reviewer/evidence/sample-ai-review-evidence.md
+accelerator_path: accelerators/ai-workflow-prompts/bounded-pr-reviewer/
+authority_boundary: advisory-only, human-reviewed, non-authoritative

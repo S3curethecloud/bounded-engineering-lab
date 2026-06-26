@@ -31,3 +31,6 @@ jobs:
 
       - name: Check lab registry
         run: bash ./scripts/check-registry.sh
+
+      - name: Check lab metadata
+        run: bash ./scripts/check-lab-metadata.sh
