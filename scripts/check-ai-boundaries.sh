@@ -18,6 +18,12 @@ while IFS= read -r file; do
       continue
     fi
 
+    # Safe explanatory statements such as "does not imply autonomous approval"
+    # should not fail when they explicitly preserve human authority.
+    if echo "$line_text" | grep -Eiq '\b(does not imply|does not grant|does not provide|must not|advisory only|human review is required)\b'; then
+      continue
+    fi
+
     echo "${file}:${line_number}:${line_text}"
     echo "Potential AI authority boundary violation detected in: $file"
     status=1
