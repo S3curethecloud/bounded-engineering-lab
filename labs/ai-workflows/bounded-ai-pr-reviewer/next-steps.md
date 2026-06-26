@@ -20,6 +20,4 @@ This lab can become an accelerator when:
 
 ## Accelerator Candidate Path
 
-```text
-accelerators/ai-workflow-prompts/bounded-pr-reviewer/
-
+Path: accelerators/ai-workflow-prompts/bounded-pr-reviewer/
