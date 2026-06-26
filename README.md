@@ -196,6 +196,30 @@ This repository does not:
 - Operate as a live deployment control plane
 - Deploy production infrastructure by default
 
+## Quickstart
+
+Clone the repository and run the full local validation, index generation, and evidence workflow:
+
+    git clone https://github.com/S3curethecloud/bounded-engineering-lab.git
+    cd bounded-engineering-lab
+    make all
+
+Expected result:
+
+    Repository structure validation passed.
+    Boundary validation passed.
+    Markdown fence validation passed.
+    AI boundary validation passed.
+    Lab registry validation passed.
+    Lab metadata validation passed.
+    Generated lab index validation passed.
+    Evidence summary generated.
+
+Key generated artifacts:
+
+    registry/generated/lab-index.jsonl
+    evidence-output/repository-evidence-summary.md
+
 ## Getting Started
 
 1. Open a lab proposal issue.
