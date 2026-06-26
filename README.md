@@ -196,6 +196,14 @@ This repository does not:
 - Operate as a live deployment control plane
 - Deploy production infrastructure by default
 
+## Source of Truth
+
+The v1 Source of Truth for this lab is maintained at:
+
+    docs/SOURCE_OF_TRUTH.md
+
+This document records the lab purpose, governance model, validation closure, current artifacts, and recommended next phase.
+
 ## Quickstart
 
 Clone the repository and run the full local validation, index generation, and evidence workflow:
