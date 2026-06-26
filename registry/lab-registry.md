@@ -14,16 +14,17 @@ This registry tracks bounded proofs, prototypes, deployment patterns, and reusab
 
 ## Labs
 
-| Lab | Category | Status | Validation | Evidence | Accelerator Path |
-| --- | --- | --- | --- | --- | --- |
-| GitHub Actions Security Baseline | Security | Draft | Structure, boundary, evidence scripts | Sample evidence summary | accelerators/github-actions/security-baseline/ |
-| Bounded AI PR Reviewer | AI Workflow | Draft | Structure, boundary, markdown fence, AI boundary | Sample AI review evidence | accelerators/ai-workflow-prompts/bounded-pr-reviewer/ |
+| Lab | Lab Path | Category | Status | Validation | Evidence | Accelerator Path |
+| --- | --- | --- | --- | --- | --- | --- |
+| GitHub Actions Security Baseline | labs/security/github-actions-security-baseline | Security | Draft | Structure, boundary, evidence scripts | Sample evidence summary | accelerators/github-actions/security-baseline/ |
+| Bounded AI PR Reviewer | labs/ai-workflows/bounded-ai-pr-reviewer | AI Workflow | Draft | Structure, boundary, markdown fence, AI boundary | Sample AI review evidence | accelerators/ai-workflow-prompts/bounded-pr-reviewer/ |
 
 ## Registry Rules
 
 Every lab added to this repository should be registered here with:
 
 - Lab name
+- Lab path
 - Category
 - Status
 - Validation method
