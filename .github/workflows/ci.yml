@@ -34,3 +34,6 @@ jobs:
 
       - name: Check lab metadata
         run: bash ./scripts/check-lab-metadata.sh
+
+      - name: Check generated lab index
+        run: bash ./scripts/check-lab-index.sh
