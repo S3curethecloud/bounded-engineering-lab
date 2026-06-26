@@ -22,3 +22,6 @@ jobs:
 
       - name: Check boundary statements
         run: bash ./scripts/check-boundaries.sh
+
+      - name: Check markdown code fences
+        run: bash ./scripts/check-markdown-fences.sh
