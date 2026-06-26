@@ -44,6 +44,14 @@ A bounded artifact clearly states:
 5. Make engineering assumptions explicit.
 6. Prevent prototypes from being mistaken for production systems.
 
+## Lab Registry
+
+The central lab registry is maintained at:
+
+registry/lab-registry.md
+
+The registry tracks each lab's category, status, validation state, evidence artifacts, and accelerator path.
+
 ## Lab Categories
 
 | Category | Purpose |
